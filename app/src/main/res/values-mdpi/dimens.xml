@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //AUTHENTICATION ACTIVITY
+    <dimen name="logo_size_authentication_activity">130dp</dimen>
+    <dimen name="logo_margin_bottom_authentication_activity">6dp</dimen>
+    <dimen name="title_margin_bottom_authentication_activity">12dp</dimen>
+    <dimen name="app_name_size_authentication_activity">16sp</dimen>
+    <dimen name="margin_edit_text_authentication_activity">3dp</dimen>
+
+    //MAIN ACTIVITY
+    <dimen name="nav_header_height">190dp</dimen>
+    <dimen name="nav_view_menu_icon_size">22dp</dimen>
+    <dimen name="navigation_view_logo_size">95dp</dimen>
+    <dimen name="navigation_view_logo_margin">6dp</dimen>
+    <dimen name="nav_view_app_name_margin_bottom">7dp</dimen>
+    <dimen name="nav_view_app_name_text_size">15sp</dimen>
+    <dimen name="nav_view_item_text_size">14sp</dimen>
+
+    //DIALOG IMAGE PREVIEW
+    <dimen name="image_preview_width">400dp</dimen>
+    <dimen name="image_preview_height">500dp</dimen>
+    <dimen name="image_preview_margin">16dp</dimen>
+    <dimen name="image_preview_edit_text_description_margin">16dp</dimen>
+
+    <dimen name="image_preview_width_landscape">550dp</dimen>
+    <dimen name="image_preview_height_landscape">350dp</dimen>
+
+    //DIALOG IMAGE SHOW
+    <dimen name="image_show_width">400dp</dimen>
+    <dimen name="image_show_height">600dp</dimen>
+
+    <dimen name="image_show_width_landscape">600dp</dimen>
+    <dimen name="image_show_height_landscape">350dp</dimen>
+
+    //ITEM LIST FRAGMENT RECYCLERVIEW
+    <dimen name="item_property_text_padding_left">10dp</dimen>
+    <dimen name="item_property_list_image_size">80dp</dimen>
+    <dimen name="item_property_type_text_size">14sp</dimen>
+    <dimen name="item_property_district_text_size">12sp</dimen>
+    <dimen name="item_property_price_text_size">18sp</dimen>
+    <dimen name="item_property_sold_out_image_size">90dp</dimen>
+
+    //DETAILS VIEW FRAGMENT
+    <dimen name="details_view_padding_text_section">4dp</dimen>
+    <dimen name="item_property_details_margin_image">4dp</dimen>
+    <dimen name="item_property_image_size">120dp</dimen>
+    <dimen name="details_view_text_section_size">14sp</dimen>
+    <dimen name="details_description_property_text_size">12sp</dimen>
+    <dimen name="no_property_selected_text_size">16sp</dimen>
+    <dimen name="recycler_view_picture_margin">3dp</dimen>
+    <dimen name="linear_layout_info_margin_start">12dp</dimen>
+    <dimen name="linear_layout_info_margin_end">12dp</dimen>
+    <dimen name="linear_layout_info_padding">8dp</dimen>
+    <dimen name="linear_layout_info_values_margin_start">8dp</dimen>
+    <dimen name="details_view_icons_size">22dp</dimen>
+    <dimen name="details_view_icons_margin_right">6dp</dimen>
+    <dimen name="details_map_view_size">130dp</dimen>
+    <dimen name="text_picture_description_size">12sp</dimen>
+    <dimen name="item_text_view_size">12dp</dimen>
+
+    //FRAGMENT LIST
+    <dimen name="margin_fab_revert_list_view">4dp</dimen>
+    <dimen name="no_property_found_text_size">18sp</dimen>
+
+    //FRAGMENT LOAN SIMULATOR
+    <dimen name="loan_margin_between_items">12dp</dimen>
+    <dimen name="loan_margin_between_items_landscape">4dp</dimen>
+    <dimen name="loan_text_title_size">14sp</dimen>
+    <dimen name="loan_values_number_text_size">19dp</dimen>
+
+    //FRAGMENT PROFILE
+    <dimen name="profile_user_picture_size">120dp</dimen>
+    <dimen name="profile_user_name_margin_top">22dp</dimen>
+
+    //FRAGMENT SEARCH
+    <dimen name="search_margin_between_linear_layout">4dp</dimen>
+
+</resources>

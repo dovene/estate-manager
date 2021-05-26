@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Fragment.Search.SearchFragment">
+
+    <TextView
+        android:id="@+id/search_property_filter_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/primaryLightColor"
+        android:padding="@dimen/details_view_padding_text_section"
+        android:text="Filter by :"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/details_view_text_section_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <LinearLayout
+        android:id="@+id/linear_Layout_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_nbr_of_room"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_property_filter_tv">
+
+        <TextView
+            android:id="@+id/search_property_price_between_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price ($) :"></TextView>
+
+        <EditText
+            android:id="@+id/search_property_price_min_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Min"
+            android:inputType="number"></EditText>
+
+        <EditText
+            android:id="@+id/search_property_price_max_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Max"
+            android:inputType="number"></EditText>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_nbr_of_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_Layout_surface"
+        app:layout_constraintTop_toBottomOf="@id/linear_Layout_price">
+        <TextView
+            android:id="@+id/search_property_nbr_of_room_between_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of rooms :"></TextView>
+        <EditText
+            android:id="@+id/search_property_room_nbr_min_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Min"
+            android:inputType="number"></EditText>
+        <EditText
+            android:id="@+id/search_property_room_nbr_max_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Max"
+            android:inputType="number"></EditText>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_Layout_surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/search_property_facilities_tv"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_nbr_of_room">
+        <TextView
+            android:id="@+id/search_property_surface_between_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surface (m2):"></TextView>
+
+        <EditText
+            android:id="@+id/search_property_surface_min_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Min"
+            android:inputType="number"></EditText>
+
+        <EditText
+            android:id="@+id/search_property_surface_max_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:maxEms="10"
+            android:hint="Max"
+            android:inputType="number"></EditText>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/search_property_facilities_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        android:text="With facilities :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout_checkbox"
+        app:layout_constraintTop_toBottomOf="@id/linear_Layout_surface" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_Layout_entry_date"
+        app:layout_constraintTop_toBottomOf="@id/search_property_facilities_tv">
+        <CheckBox
+            android:id="@+id/checkBox_park"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Park"
+            android:textSize="12sp"></CheckBox>
+        <CheckBox
+            android:id="@+id/checkBox_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Store"
+            android:textSize="12sp"></CheckBox>
+        <CheckBox
+            android:id="@+id/checkBox_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Station"
+            android:textSize="12sp"></CheckBox>
+        <CheckBox
+            android:id="@+id/checkBox_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="School"
+            android:textSize="12sp"></CheckBox>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_Layout_entry_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_Layout_sold_date"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_checkbox">
+        <TextView
+            android:id="@+id/search_property_entry_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="On the market since :" />
+        <Button
+            android:id="@+id/search_property_entry_date_min_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Select date"></Button>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_Layout_sold_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_Layout_entry_date"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2">
+        <TextView
+            android:id="@+id/search_property_sold_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sold since :" />
+        <Button
+            android:id="@+id/search_property_sold_date_min_values_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Select date"></Button>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_margin_between_linear_layout"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_Layout_sold_date"
+        app:layout_constraintBottom_toTopOf="@id/search_property_action_btn">
+        <TextView
+            android:id="@+id/search_property_district_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="District :" />
+        <Spinner
+            android:id="@+id/search_property_district_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"></Spinner>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_property_action_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/search_margin_between_linear_layout"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_search_white_24dp"
+        android:tint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    tools:context=".UI.Fragment.LoanSimulator.LoanSimulatorFragment">
+
+
+    <TextView
+        android:id="@+id/loan_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:layout_marginTop="16dp"
+        android:text="Loan Amount"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/simulator_loan_amount_ed"
+        android:layout_width="133dp"
+        android:layout_height="49dp"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="0"
+        android:inputType="none|number"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/financial_contribution_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="Financial Contribution"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <EditText
+        android:id="@+id/simulator_financial_contribution_ed"
+        android:layout_width="121dp"
+        android:layout_height="44dp"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="0"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/interest_rate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="Interest rate"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="402dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/simulator_interest_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="0%"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/loan_values_number_text_size"
+        tools:layout_editor_absoluteX="429dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+        android:id="@+id/terme_years_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="Terme in Years"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/simulator_nbr_of_years_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="0 years"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/loan_values_number_text_size"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="208dp"
+        android:layout_height="29dp"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:max="29"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <TextView
+        android:id="@+id/monthly_payment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="Monthly Payments"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/simulator_monthly_payment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="0$"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/loan_values_number_text_size"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <TextView
+        android:id="@+id/total_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="Total Payments"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="@dimen/loan_text_title_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="402dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/simulator_total_payment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loan_margin_between_items"
+        android:text="0$"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/loan_values_number_text_size"
+        tools:layout_editor_absoluteX="432dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/simulator_reset_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_revert"
+        tools:layout_editor_absoluteX="453dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

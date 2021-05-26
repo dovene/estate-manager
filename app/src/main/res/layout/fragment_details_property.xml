@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Activities.DetailsPropertyActivity"
+    android:id="@+id/details_layout_fragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/no_property_selected_details_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_location_city_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="No property selected"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="@dimen/no_property_selected_text_size"></TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_details_property"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details_media_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryLightColor"
+                android:padding="@dimen/details_view_padding_text_section"
+                android:text="@string/details_layout_media_text_view"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/details_view_text_section_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/recycler_view_pictures"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/recycler_view_picture_margin"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/details_title_description_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details_media_text_view" />
+
+            <TextView
+                android:id="@+id/details_title_description_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryLightColor"
+                android:padding="@dimen/details_view_padding_text_section"
+                android:text="@string/details_layout_description_text_view"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/details_view_text_section_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/details_description_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_pictures" />
+
+            <TextView
+                android:id="@+id/details_description_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/details_view_padding_text_section"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum augue eu commodo faucibus. Aliquam mattis dolor et quam tincidunt, sed cursus lorem placerat. Phasellus pellentesque felis sed velit sagittis, at convallis leo auctor. Aliquam erat volutpat. Etiam pellentesque est lacus, ac facilisis elit vestibulum nec. Etiam vel convallis eros. Morbi eget porttitor nibh, in tempor justo. Nunc et lacus justo. In nulla nisi, faucibus non diam non, placerat euismod elit. Vivamus pellentesque tortor augue, et pulvinar augue volutpat vel. Vivamus eu orci quis magna semper ullamcorper vitae at sapien. Aliquam sit amet ultrices turpis."
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="@dimen/details_description_property_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/details_info_property"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details_title_description_text_view" />
+
+            <TextView
+                android:id="@+id/details_info_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryLightColor"
+                android:padding="@dimen/details_view_padding_text_section"
+                android:text="Info"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/details_view_text_section_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details_description_text_view" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toTopOf="@id/facilities_info_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details_info_property">
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_surface"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/linear_layout_info_margin_start"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toTopOf="@id/linear_Layout_price"
+                    app:layout_constraintEnd_toStartOf="@id/linear_layout_nbr_of_room"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_surface"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:text="Surface"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_surface_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="750 sq m" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toTopOf="@id/linear_Layout_agent_in_charge"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_Layout_surface"
+                    app:layout_constraintStart_toStartOf="@+id/linear_Layout_surface"
+                    app:layout_constraintTop_toBottomOf="@id/linear_Layout_surface">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_attach_money_black_24dp"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_price_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="1,000,000$" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_agent_in_charge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toTopOf="@id/linear_Layout_property_status"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_Layout_price"
+                    app:layout_constraintStart_toStartOf="@+id/linear_Layout_price"
+                    app:layout_constraintTop_toBottomOf="@id/linear_Layout_price">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_account_box_black_24dp"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agent in charge"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_agent_in_charge_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_property_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_Layout_agent_in_charge"
+                    app:layout_constraintStart_toStartOf="@+id/linear_Layout_agent_in_charge"
+                    app:layout_constraintTop_toBottomOf="@id/linear_Layout_agent_in_charge">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_status"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property status"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_property_status_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:text="Available"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_entry_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_Layout_price"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_layout_nbr_of_room"
+                    app:layout_constraintStart_toStartOf="@+id/linear_layout_nbr_of_room"
+                    app:layout_constraintTop_toTopOf="@+id/linear_Layout_price">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_date_range_black_24dp"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entry Date"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_entry_date_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="12/12/2001" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_property_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_Layout_agent_in_charge"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_Layout_entry_date"
+                    app:layout_constraintStart_toStartOf="@+id/linear_Layout_entry_date"
+                    app:layout_constraintTop_toTopOf="@+id/linear_Layout_agent_in_charge">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_location_city_black_24dp"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property type"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_property_type_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="House" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Layout_sold_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_Layout_property_status"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_Layout_property_type"
+                    app:layout_constraintStart_toStartOf="@+id/linear_Layout_property_type"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_Layout_agent_in_charge">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_date_range_black_24dp"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of sale"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_sold_date_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="12/12/2001" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_nbr_of_room"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/linear_layout_info_margin_end"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/linear_layout_info_padding"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_Layout_surface"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/linear_Layout_surface"
+                    app:layout_constraintTop_toTopOf="@+id/linear_Layout_surface">
+
+                    <ImageView
+                        android:layout_width="@dimen/details_view_icons_size"
+                        android:layout_height="@dimen/details_view_icons_size"
+                        android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/secondaryColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of rooms"
+                            android:textSize="@dimen/item_text_view_size"
+                            android:textColor="@color/primaryDarkColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_nbr_of_rooms_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/linear_layout_info_values_margin_start"
+                            android:text="8" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/facilities_info_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryLightColor"
+                android:padding="@dimen/details_view_padding_text_section"
+                android:text="Facilities"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/details_view_text_section_size"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/linear_layout_park"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_park"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/linear_layout_school"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilities_info_tv">
+
+                <ImageView
+                    android:layout_width="@dimen/details_view_icons_size"
+                    android:layout_height="@dimen/details_view_icons_size"
+                    android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                    android:src="@drawable/ic_terrain_park"
+                    android:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Park"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_store"
+                app:layout_constraintStart_toEndOf="@id/linear_layout_park"
+                app:layout_constraintTop_toBottomOf="@id/facilities_info_tv">
+
+                <ImageView
+                    android:layout_width="@dimen/details_view_icons_size"
+                    android:layout_height="@dimen/details_view_icons_size"
+                    android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                    android:src="@drawable/ic_school_black_24dp"
+                    android:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="School"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_station"
+                app:layout_constraintStart_toEndOf="@+id/linear_layout_school"
+                app:layout_constraintTop_toBottomOf="@id/facilities_info_tv">
+
+                <ImageView
+                    android:layout_width="@dimen/details_view_icons_size"
+                    android:layout_height="@dimen/details_view_icons_size"
+                    android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                    android:src="@drawable/ic_store"
+                    android:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Store"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linear_layout_store"
+                app:layout_constraintTop_toBottomOf="@id/facilities_info_tv">
+
+                <ImageView
+                    android:layout_width="@dimen/details_view_icons_size"
+                    android:layout_height="@dimen/details_view_icons_size"
+                    android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                    android:src="@drawable/ic_subway"
+                    android:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Station"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilities_info_tv">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/details_view_icons_size"
+                            android:layout_height="@dimen/details_view_icons_size"
+                            android:layout_marginRight="@dimen/details_view_icons_margin_right"
+                            android:src="@drawable/ic_place_location"
+                            android:tint="@color/secondaryColor" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Location"
+                                android:textSize="@dimen/item_text_view_size"
+                                android:textColor="@color/primaryDarkColor"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/details_address_street_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="740 Park Avenue" />
+
+                            <TextView
+                                android:id="@+id/details_address_complement_street_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Apt 6/7A" />
+
+                            <TextView
+                                android:id="@+id/details_address_district_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="New York" />
+
+                            <TextView
+                                android:id="@+id/details_address_state_and_postcode_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="NY 10021" />
+
+                            <TextView
+                                android:id="@+id/details_address_country_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="United States" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="@dimen/details_map_view_size"
+                        android:layout_height="@dimen/details_map_view_size"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="10dp"
+                        app:cameraZoom="16"
+                        app:liteMode="true"
+                        app:mapType="normal" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

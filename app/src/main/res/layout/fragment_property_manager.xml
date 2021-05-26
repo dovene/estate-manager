@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/property_manager_fragment_scrollView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Fragment.PropertyManager.PropertyManagerFragment">
+
+        <TextView
+            android:id="@+id/manager_layout_picture_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Add picture :"
+            app:layout_constraintEnd_toStartOf="@+id/manager_layout_price_tv"
+            app:layout_constraintHorizontal_bias="0.773"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_pictures"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_layout"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/manager_layout_type_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_price_editText"
+            app:layout_constraintStart_toEndOf="@+id/add_picture_fab"
+            app:layout_constraintTop_toBottomOf="@id/manager_layout_picture_tv" />
+
+        <TextView
+            android:id="@+id/manager_layout_type_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/property_type_tv"
+            app:layout_constraintEnd_toStartOf="@+id/manager_layout_price_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_pictures" />
+
+        <TextView
+            android:id="@+id/manager_layout_price_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/property_price_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/manager_layout_type_tv"
+            app:layout_constraintTop_toTopOf="@+id/manager_layout_type_tv" />
+
+        <Spinner
+            android:id="@+id/manager_layout_type_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_type_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_type_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_type_tv" />
+
+        <EditText
+            android:id="@+id/manager_layout_price_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_price_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_price_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_price_tv" />
+
+        <TextView
+            android:id="@+id/manager_layout_description_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/property_description_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_type_spinner"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_type_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_type_spinner" />
+
+        <EditText
+            android:id="@+id/manager_layout_description_editText"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_description_tv"></EditText>
+
+        <TextView
+            android:id="@+id/manager_layout_surface_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/property_surface_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_description_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_description_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_description_editText" />
+
+        <EditText
+            android:id="@+id/manager_layout_surface_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_surface_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_surface_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_surface_tv" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_surface_editText"
+            app:layout_constraintBottom_toTopOf="@id/entry_date_selector_btn"/>
+
+        <Button
+            android:id="@+id/entry_date_selector_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Entry Date"
+            app:layout_constraintBottom_toTopOf="@id/manager_layout_facilities_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_surface_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_surface_editText"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_surface_editText" />
+
+        <TextView
+            android:id="@+id/entry_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select an market entry date"
+            app:layout_constraintBottom_toTopOf="@+id/manager_layout_facilities_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_nbr_of_room_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_nbr_of_room_editText"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_surface_editText" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/entry_date_selector_btn"
+            app:layout_constraintBottom_toTopOf="@id/manager_layout_facilities_tv"/>
+
+        <TextView
+            android:id="@+id/manager_layout_number_of_room_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/property_number_of_room_tv"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_price_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_price_editText"
+            app:layout_constraintTop_toTopOf="@+id/manager_layout_surface_tv" />
+
+        <EditText
+            android:id="@+id/manager_layout_nbr_of_room_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_number_of_room_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_number_of_room_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_number_of_room_tv" />
+
+
+        <CheckBox
+            android:id="@+id/checkBox_is_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Is Sold"
+            app:layout_constraintBottom_toTopOf="@id/manager_layout_btn_add_property"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_address_country_editText"></CheckBox>
+
+        <Button
+            android:id="@+id/sold_date_selector_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sold Date"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_country_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_country_editText"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_address_country_editText"></Button>
+
+        <EditText
+            android:id="@+id/manager_layout_address_nbr_of_street_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox_park"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/checkBox_park"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/manager_layout_address_street_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_nbr_of_street_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_nbr_of_street_editText"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+        <EditText
+            android:id="@+id/manager_layout_address_district_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_street_editText"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_street_editText"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+        <EditText
+            android:id="@+id/manager_layout_address_state_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_district_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_district_editText"
+            app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/manager_layout_address_country_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_district_editText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_district_editText"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <EditText
+            android:id="@+id/manager_layout_address_post_code_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_state_editText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_state_editText"
+            app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/manager_layout_address_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Address"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox_store"
+            app:layout_constraintStart_toStartOf="@+id/checkBox_store"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox_store" />
+
+        <CheckBox
+            android:id="@+id/checkBox_park"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Park"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox_station"
+            app:layout_constraintStart_toStartOf="@+id/checkBox_station"
+            app:layout_constraintTop_toBottomOf="@id/checkBox_station"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/checkBox_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Store"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox_school"
+            app:layout_constraintStart_toStartOf="@+id/checkBox_school"
+            app:layout_constraintTop_toBottomOf="@id/checkBox_school"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/checkBox_station"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Station"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_nbr_of_room_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_nbr_of_room_editText"
+            app:layout_constraintTop_toTopOf="@+id/checkBox_school"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/checkBox_school"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="School"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_facilities_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_facilities_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_facilities_tv"></CheckBox>
+
+        <TextView
+            android:id="@+id/manager_layout_facilities_tv"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Facilities :"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_surface_editText"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_surface_editText"
+            app:layout_constraintTop_toBottomOf="@+id/entry_date_selector_btn"></TextView>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Country :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="PostCode :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="State :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView10"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="District :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Number :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/manager_layout_address_tv"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_address_tv"
+            app:layout_constraintTop_toBottomOf="@+id/manager_layout_address_tv" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Street :"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <Button
+            android:id="@+id/manager_layout_btn_add_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:padding="8dp"
+            android:text="Add property"
+            android:textColor="@color/primaryDarkColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox_is_sold" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/take_picture_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:tint="@android:color/black"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_picture_tv"
+            app:layout_constraintTop_toTopOf="@+id/recycler_view_pictures"
+            app:srcCompat="@drawable/add_photo" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_picture_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/recycler_view_pictures"
+            app:layout_constraintStart_toStartOf="@+id/manager_layout_picture_tv"
+            app:layout_constraintTop_toBottomOf="@+id/take_picture_fab"
+            app:srcCompat="@drawable/ic_filter_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

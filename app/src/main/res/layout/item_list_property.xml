@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_list_property">
+
+    <ImageView
+        android:id="@+id/property_list_picture_iv"
+        android:layout_width="@dimen/item_property_list_image_size"
+        android:layout_height="@dimen/item_property_list_image_size"
+        android:layout_margin="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
+
+    <TextView
+        android:id="@+id/item_property_type_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:text="House"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_property_type_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/item_property_district_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/property_list_picture_iv"
+        app:layout_constraintTop_toTopOf="@+id/property_list_picture_iv"></TextView>
+
+    <TextView
+        android:id="@+id/item_property_district_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Brooklyn"
+        android:textSize="@dimen/item_property_district_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/item_property_price_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_property_type_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/item_property_type_text_view"></TextView>
+
+    <TextView
+        android:id="@+id/item_property_price_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$17,890,000"
+        android:textColor="@color/secondaryDarkColor"
+        android:textSize="@dimen/item_property_price_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/property_list_picture_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_property_district_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/item_property_district_text_view"></TextView>
+
+    <ImageView
+        android:id="@+id/sold_out_stamp_iv"
+        android:layout_width="@dimen/item_property_sold_out_image_size"
+        android:layout_height="@dimen/item_property_sold_out_image_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sold_out_stamp"></ImageView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
